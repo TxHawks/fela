@@ -1,7 +1,6 @@
 # fela-plugin-rtl
 
-
-<img alt="npm downloads" src="https://img.shields.io/npm/dm/fela-plugin-rtl.svg">
+<img alt="npm version" src="https://badge.fury.io/js/fela-plugin-rtl.svg"> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela-plugin-rtl.svg">
 
 Uses [rtl-css-js](https://github.com/kentcdodds/rtl-css-js) to convert a style object to its right-to-left counterpart.
 
@@ -31,7 +30,7 @@ const renderer = createRenderer({
 {
   paddingLeft: 20,
   marginRight: '25px',
-  cursor: 'w',
+  cursor: 'w-resize',
   textShadow: 'red 2px 0'
 }
 ```
@@ -40,7 +39,7 @@ const renderer = createRenderer({
 {
   paddingRight: 20,
   marginleft: '25px',
-  cursor: 'e',
+  cursor: 'e-resize',
   textShadow: 'red -2px 0'
 }
 ```

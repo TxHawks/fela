@@ -845,8 +845,8 @@
 <p>Fela is a small, performant and framework-agnostic toolbelt to handle styling in JavaScript.<br>
 It is dynamic by design and renders your styles depending on your application state.</p>
 <p>It generates minimal, optimized CSS and therefore supports all common CSS features such as media queries, pseudo classes, keyframes and font-faces. It supports universal rendering and ships with a powerful plugin API adding e.g. <a href="packages/fela-plugin-prefixer">vendor prefixing</a> or <a href="packages/fela-plugin-fallback-value">fallback value</a> support.</p>
-<p>Fela can be used with <a href="https://github.com/rofrischmann/fela/tree/master/packages/react-fela" _target="blank">React</a> or with any other view library.It even supports <a href="http://fela.js.org/docs/guides/UsageWithReactNative.html" _target="blank">React Native</a>.</p>
-<p><img alt="TravisCI" src="https://travis-ci.org/rofrischmann/fela.svg?branch=master"> <a href="https://codeclimate.com/github/rofrischmann/fela/coverage" _target="blank"><img alt="Test Coverage" src="https://codeclimate.com/github/rofrischmann/fela/badges/coverage.svg"></a> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela.svg"> <img alt="gzipped size" src="https://img.shields.io/badge/gzipped-~3kb-brightgreen.svg"> <img alt="npm version" src="https://badge.fury.io/js/fela.svg"> <a href="https://gitter.im/rofrischmann/fela" _target="blank"><img alt="Gitter" src="https://img.shields.io/gitter/room/rofrischmann/fela.svg"></a></p>
+<p>Fela can be used with <a href="https://github.com/rofrischmann/fela/tree/master/packages/react-fela" _target="blank">React</a> or with any other view library. It even supports <a href="http://fela.js.org/docs/guides/UsageWithReactNative.html" _target="blank">React Native</a>.</p>
+<p><img alt="TravisCI" src="https://travis-ci.org/rofrischmann/fela.svg?branch=master"> <a href="https://codeclimate.com/github/rofrischmann/fela/coverage" _target="blank"><img alt="Test Coverage" src="https://codeclimate.com/github/rofrischmann/fela/badges/coverage.svg"></a> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela.svg"> <img alt="gzipped size" src="https://img.shields.io/badge/gzipped-~3kb-brightgreen.svg"> <img alt="npm version" src="https://badge.fury.io/js/fela.svg"> <a href="https://gitter.im/rofrischmann/fela" _target="blank"><img alt="Gitter" src="https://img.shields.io/gitter/room/rofrischmann/fela.svg"></a> <a href="#backers"><img alt="Backers on Open Collective" src="https://opencollective.com/fela/backers/badge.svg"></a> <a href="#sponsors"><img alt="Sponsors on Open Collective" src="https://opencollective.com/fela/sponsors/badge.svg"></a></p>
 <h2 id="installation">Installation</h2>
 <pre class="language-"><code class="lang-sh">yarn add fela
 </code></pre>
@@ -945,6 +945,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><a href="https://medium.com/@steida/css-in-js-the-argument-refined-471c7eb83955#.3otvkubq4" _target="blank"><strong>CSS in JS: The Argument Refined</strong></a><br> - <em>by <a href="https://twitter.com/steida" _target="blank">Daniel Steigerwald</a></em></li>
 <li><a href="https://davidsinclair.io/thoughts/what-is-fela" _target="blank"><strong>What is Fela?</strong></a><br> - <em>by <a href="https://davidsinclair.io" _target="blank">David Sinclair</a></em></li>
 <li><a href="https://gist.github.com/troch/c27c6a8cc47b76755d848c6d1204fdaf#file-choosing-a-css-in-js-library-md" _target="blank"><strong>Choosing a CSS in JS library</strong></a><br> - <em>by <a href="https://twitter.com/tcroch" _target="blank">Thomas Roch</a></em></li>
+<li><a href="https://medium.com/@rofrischmann/introducing-fela-6-0-289c84b52dd5" _target="blank"><strong>Introducing Fela 6.0</strong></a><br> - <em>by <a href="https://twitter.com/rofrischmann" _target="blank">Robin Frischmann</a></em></li>
 </ul>
 <h2 id="ecosystem">Ecosystem</h2>
 <p>There are tons of useful packages maintained within this repository including plugins, enhancers, bindings and tools that can be used together with Fela. Check the <a href="http://fela.js.org/docs/introduction/Ecosystem.html" _target="blank">Ecosystem</a> documentation for a quick overview.</p>
@@ -952,13 +953,15 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>Apart from all the packages managed within this repository, there are many community third-party projects that are worth mentioning:</p>
 <ul>
 <li><a href="https://github.com/milesj/aesthetic" _target="blank">aesthetic</a> - React style and theme layer with Fela support</li>
-<li><a href="https://github.com/pitr12/base-styling-components" _target="blank">base-styling-components</a>: Abstract Box and Text Components</li>
+<li><a href="https://github.com/pitr12/base-styling-components" _target="blank">base-styling-components</a> - Abstract Box and Text Components</li>
+<li><a href="https://github.com/root-systems/catstack" _target="blank">catstack</a> - A modular mad science framework for teams working on production web apps</li>
 <li><a href="https://github.com/cloudflare/cf-ui" _target="blank">cf-ui</a> - Cloudflare UI Framework</li>
 <li><a href="https://github.com/wcastand/cycle-fela" _target="blank">cycle-fela</a> - Cycle bindings for Fela</li>
+<li><a href="https://github.com/root-systems/dogstack" _target="blank">dogstack</a> - A popular-choice grab-bag framework for teams working on production web apps</li>
 <li><a href="https://github.com/este/este" _target="blank">este</a> - Starter kit for universal full&#x2013;fledged React apps build with Fela</li>
-<li><a href="https://github.com/arturmuller/fela-components" _target="blank">fela-components</a>: Styling library for React and Fela</li>
-<li><a href="https://github.com/codepunkt/fela-react-prop" _target="blank">fela-react-prop</a>: Generate class names for fela style rule and apply them as property on a wrapped component</li>
-<li><a href="https://github.com/dustin-H/fela-styles-connector" _target="blank">fela-styles-connector</a>: Simplified react-fela <code>connect</code> with auto-bound styles</li>
+<li><a href="https://github.com/arturmuller/fela-components" _target="blank">fela-components</a> - Styling library for React and Fela</li>
+<li><a href="https://github.com/codepunkt/fela-react-prop" _target="blank">fela-react-prop</a> - Generate class names for fela style rule and apply them as property on a wrapped component</li>
+<li><a href="https://github.com/dustin-H/fela-styles-connector" _target="blank">fela-styles-connector</a> - Simplified react-fela <code>connect</code> with auto-bound styles</li>
 <li><a href="https://github.com/benoneal/freyja" _target="blank">frejya</a>: Pass styles as props to components</li>
 <li><a href="https://github.com/ahdinosaur/hyper-fela" _target="blank">hyper-fela</a> - HyperScript bindings for Fela</li>
 <li><a href="https://github.com/rofrischmann/kilvin" _target="blank">kilvin</a> - Primitive React Layout Components with Fela</li>
@@ -968,10 +971,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><a href="https://github.com/queckezz/veel" _target="blank">veel</a> - Base react styling components using fela with a design system</li>
 <li><a href="https://github.com/dustin-H/vue-fela" _target="blank">vue-fela</a> - Vue bindings for Fela</li>
 </ul>
-<h2 id="contributing">Contributing</h2>
-<p>We highly appreciate any contribution.<br>
-For more information follow the <a href=".github/CONTRIBUTING.md">contribution guide</a>.<br>
-Also, please read our <a href=".github/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
 <h2 id="support">Support</h2>
 <p>Got a question? Come and join us on <a href="https://gitter.im/rofrischmann/fela" _target="blank">Gitter</a>! <br>
 We&apos;d love to help out. We also highly appreciate any feedback.</p>
@@ -993,10 +992,32 @@ We&apos;d love to help out. We also highly appreciate any feedback.</p>
 <li><a href="https://www.optisure.de" _target="blank">Optisure</a></li>
 <li><a href="https://www.v2.com" _target="blank">V2</a></li>
 </ul>
+<h2 id="contributing">Contributing</h2>
+<p>This project exists thanks to all the people who contribute.
+<a href="graphs/contributors"><img src="https://opencollective.com/fela/contributors.svg?width=890"></a></p>
+<p>We highly appreciate any contribution.<br>
+For more information follow the <a href=".github/CONTRIBUTING.md">contribution guide</a>.<br>
+Also, please read our <a href=".github/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+<h2 id="backers">Backers</h2>
+<p>Thank you to all our backers!</p>
+<p><a href="https://opencollective.com/fela#backers" target="_blank" _target="blank"><img src="https://opencollective.com/fela/backers.svg?width=890"></a></p>
+<h2 id="sponsors">Sponsors</h2>
+<p>Support this project by becoming a sponsor. Your logo will show up here with a link to your website.</p>
+<p><a href="https://opencollective.com/fela/sponsor/0/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/1/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/2/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/3/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/4/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/5/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/6/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/7/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/8/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/fela/sponsor/9/website" target="_blank" _target="blank"><img src="https://opencollective.com/fela/sponsor/9/avatar.svg"></a></p>
 <h2 id="license">License</h2>
 <p>Fela is licensed under the <a href="http://opensource.org/licenses/MIT" _target="blank">MIT License</a>.<br>
 Documentation is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" _target="blank">Creative Common License</a>.<br>
 Created with &#x2665; by <a href="http://rofrischmann.de" _target="blank">@rofrischmann</a> and all the great contributors.</p>
+<p><a href="https://app.codesponsor.io/link/pCQU3wY7qzomx7oGR27YYg5s/rofrischmann/fela" rel="nofollow" target="_blank" _target="blank"><img src="https://app.codesponsor.io/embed/pCQU3wY7qzomx7oGR27YYg5s/rofrischmann/fela.svg" style="width: 888px; height: 68px;" alt="Sponsor"></a></p>
 
                                 
                                 </section>
@@ -1036,7 +1057,7 @@ Created with &#x2665; by <a href="http://rofrischmann.de" _target="blank">@rofri
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Read Me","level":"1.1","depth":1,"next":{"title":"1. Introduction","level":"1.2","depth":1,"path":"docs/Introduction.md","ref":"docs/Introduction.md","articles":[{"title":"1.1. Motivation","level":"1.2.1","depth":2,"path":"docs/introduction/Motivation.md","ref":"docs/introduction/Motivation.md","articles":[]},{"title":"1.2. Principles","level":"1.2.2","depth":2,"path":"docs/introduction/Principles.md","ref":"docs/introduction/Principles.md","articles":[]},{"title":"1.3. Benefits","level":"1.2.3","depth":2,"path":"docs/introduction/Benefits.md","ref":"docs/introduction/Benefits.md","articles":[]},{"title":"1.4. Drawbacks","level":"1.2.4","depth":2,"path":"docs/introduction/Drawbacks.md","ref":"docs/introduction/Drawbacks.md","articles":[]},{"title":"1.5. Ecosystem","level":"1.2.5","depth":2,"path":"docs/introduction/Ecosystem.md","ref":"docs/introduction/Ecosystem.md","articles":[]},{"title":"1.6. Examples","level":"1.2.6","depth":2,"path":"docs/introduction/Examples.md","ref":"docs/introduction/Examples.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"README.md","mtime":"2017-09-01T16:48:27.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-09-01T17:55:26.119Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Read Me","level":"1.1","depth":1,"next":{"title":"1. Introduction","level":"1.2","depth":1,"path":"docs/Introduction.md","ref":"docs/Introduction.md","articles":[{"title":"1.1. Motivation","level":"1.2.1","depth":2,"path":"docs/introduction/Motivation.md","ref":"docs/introduction/Motivation.md","articles":[]},{"title":"1.2. Principles","level":"1.2.2","depth":2,"path":"docs/introduction/Principles.md","ref":"docs/introduction/Principles.md","articles":[]},{"title":"1.3. Benefits","level":"1.2.3","depth":2,"path":"docs/introduction/Benefits.md","ref":"docs/introduction/Benefits.md","articles":[]},{"title":"1.4. Drawbacks","level":"1.2.4","depth":2,"path":"docs/introduction/Drawbacks.md","ref":"docs/introduction/Drawbacks.md","articles":[]},{"title":"1.5. Ecosystem","level":"1.2.5","depth":2,"path":"docs/introduction/Ecosystem.md","ref":"docs/introduction/Ecosystem.md","articles":[]},{"title":"1.6. Examples","level":"1.2.6","depth":2,"path":"docs/introduction/Examples.md","ref":"docs/introduction/Examples.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"README.md","mtime":"2017-09-25T13:53:07.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-09-25T15:32:44.372Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

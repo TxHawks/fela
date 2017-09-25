@@ -5,6 +5,17 @@ If you're searching for older version-based release notes please check out the o
 
 > Dates follow the `dd/mm/yy` notation.
 
+## 22/09/17
+| Package | Version | Changes |
+| ---- | --- | --- |
+| fela | 6.0.0 | ([#363](https://github.com/rofrischmann/fela/pull/363)) Completely new caching mechanism<br> ([#328](https://github.com/rofrischmann/fela/issues/328)) added support for `@supports` queries |
+| fela-dom | 6.0.0 | Rehydration for rules and media rules |
+| react-fela<br>inferno-fela<br>preact-fela | 6.0.0 | ([#367](https://github.com/rofrischmann/fela/issues/367)) ThemeProvider now uses the the publish-subscribe design pattern to safely spread the theme<br> ([#384](https://github.com/rofrischmann/fela/issues/384)) The former `is` prop now is called `as` due to overlapping with the official web components specification<br> ([#313](https://github.com/rofrischmann/fela/pull/313)) Static properties and methods are now hoisted |
+| babel-plugin-fela | 1.0.0 | ([#305](https://github.com/rofrischmann/fela/issues/305)) Babel plugin to optimize style rendering & performance |
+| fela-plugin-bidi | 1.0.0 | ([#381](https://github.com/rofrischmann/fela/issues/381)) An alternative to [fela-plugin-rtl](packages/fela-plugin-rtl) based on CSSWG's [Logical Properties and Values Level 1 proposal](https://www.w3.org/TR/css-logical-1/) |
+| fela-utils | 7.0.0 | Some utilities have been added and some removed/moved |
+All fela-utils dependents have been upgraded by a patch release to match the new version.
+
 ## 01/09/17
 | Package | Version | Changes |
 | ---- | --- | --- |
