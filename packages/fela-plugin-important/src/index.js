@@ -1,5 +1,5 @@
 /* @flow */
-import { isObject } from 'fela-utils'
+import isPlainObject from 'isobject'
 
 function addImportantToValue(value: any): any {
   if (
@@ -13,16 +13,35 @@ function addImportantToValue(value: any): any {
   return value
 }
 
-function addImportant(style: Object): Object {
-  for (const property in style) {
-    const value = style[property]
+function isAnimation(style: Object): boolean {
+  const styleNames = Object.getOwnPropertyNames(style)
+  let isAnimationItem = false
 
-    if (isObject(value)) {
-      style[property] = addImportant(value)
-    } else if (Array.isArray(value)) {
-      style[property] = value.map(addImportantToValue)
-    } else {
-      style[property] = addImportantToValue(value)
+  for (let i = 0; i < styleNames.length; i++) {
+    const property = styleNames[i].toString()
+
+    isAnimationItem =
+      property === 'to' ||
+      property.includes('from') ||
+      property.includes('animation') ||
+      property.includes('%')
+  }
+
+  return isAnimationItem
+}
+
+function addImportant(style: Object): Object {
+  if (!isAnimation(style)) {
+    for (const property in style) {
+      const value = style[property]
+
+      if (isPlainObject(value)) {
+        style[property] = addImportant(value)
+      } else if (Array.isArray(value)) {
+        style[property] = value.map(addImportantToValue)
+      } else {
+        style[property] = addImportantToValue(value)
+      }
     }
   }
 

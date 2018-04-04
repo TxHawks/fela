@@ -61,8 +61,6 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../Troubleshooting.md" />
-    
     
     <link rel="prev" href="createRenderer.html" />
     
@@ -159,12 +157,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="../../introduction/Drawbacks.html">
+        <li class="chapter " data-level="1.2.4" data-path="../../introduction/Caveats.html">
             
-                <a href="../../introduction/Drawbacks.html">
+                <a href="../../introduction/Caveats.html">
             
                     
-                    1.4. Drawbacks
+                    1.4. Caveats
             
                 </a>
             
@@ -463,6 +461,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.6" data-path="../../guides/UsageWithCycle.html">
+            
+                <a href="../../guides/UsageWithCycle.html">
+            
+                    
+                    4.6. Usage with Cycle
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -664,12 +675,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.2" data-path="../fela-dom/renderToMarkup.html">
+        <li class="chapter " data-level="1.7.2.2" data-path="../fela-dom/rehydrate.html">
             
-                <a href="../fela-dom/renderToMarkup.html">
+                <a href="../fela-dom/rehydrate.html">
             
                     
-                    6.2.2. renderToMarkup
+                    6.2.2. rehydrate
             
                 </a>
             
@@ -677,12 +688,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.3" data-path="../fela-dom/renderToSheetList.html">
+        <li class="chapter " data-level="1.7.2.3" data-path="../fela-dom/renderToMarkup.html">
+            
+                <a href="../fela-dom/renderToMarkup.html">
+            
+                    
+                    6.2.3. renderToMarkup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../fela-dom/renderToSheetList.html">
             
                 <a href="../fela-dom/renderToSheetList.html">
             
                     
-                    6.2.3. renderToSheetList
+                    6.2.4. renderToSheetList
             
                 </a>
             
@@ -740,17 +764,140 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.4" >
+            
+                <span>
+            
+                    
+                    6.4. react/preact/inferno
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../bindings/connect.html">
+            
+                <a href="../bindings/connect.html">
+            
+                    
+                    6.4.1 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../bindings/createComponent.html">
+            
+                <a href="../bindings/createComponent.html">
+            
+                    
+                    6.4.2 createComponent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../bindings/createComponentWithProxy.html">
+            
+                <a href="../bindings/createComponentWithProxy.html">
+            
+                    
+                    6.4.3 createComponentWithProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.4" data-path="../bindings/FelaComponent.html">
+            
+                <a href="../bindings/FelaComponent.html">
+            
+                    
+                    6.4.4 FelaComponent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.5" data-path="../bindings/FelaTheme.html">
+            
+                <a href="../bindings/FelaTheme.html">
+            
+                    
+                    6.4.5 FelaTheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.6" data-path="../bindings/Provider.html">
+            
+                <a href="../bindings/Provider.html">
+            
+                    
+                    6.4.6 Provider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.7" data-path="../bindings/ThemeProvider.html">
+            
+                <a href="../bindings/ThemeProvider.html">
+            
+                    
+                    6.4.7 ThemeProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.8" data-path="../bindings/withTheme.html">
+            
+                <a href="../bindings/withTheme.html">
+            
+                    
+                    6.4.8 withTheme
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../../Troubleshooting.md">
+
+            </ul>
             
-                <span>
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../MIGRATION.html">
+            
+                <a href="../../../MIGRATION.html">
             
                     
-                    7. Troubleshooting
+                    7. Migration Guide
             
                 </a>
             
@@ -848,22 +995,37 @@
 To create a new renderer instance, simply use the <code>createRenderer</code> method to actually get a renderer instance.</p>
 <h2 id="methods">Methods</h2>
 <ul>
-<li><a href="#renderrulerule-props"><code>renderRule(rule, [props])</code></a></li>
-<li><a href="#subscribelistener"><code>subscribe(listener)</code></a></li>
-<li><a href="#clear"><code>clear()</code></a></li>
+<li><a href="#renderrule">renderRule</a></li>
+<li><a href="#subscribe">subscribe</a></li>
+<li><a href="#clear">clear</a></li>
 </ul>
-<h2 id="renderrulerule-props"><code>renderRule(rule, [props])</code></h2>
+<h2 id="renderrule">renderRule</h2>
 <p>Renders a <code>rule</code> using the <code>props</code> to resolve it.</p>
 <h3 id="arguments">Arguments</h3>
-<ol>
-<li><p><code>rule</code> (<em>Function</em>): A function which satisfies the <a href="../../basics/Rules.html">rule</a> behavior. It <strong>must</strong> return a valid <a href="../../basics/Rules.html#styleobject">style object</a>.</p>
-<blockquote>
-<p>Note: In addition to valid style objects, you also <code>must</code>only use React Native supported properties.</p>
-</blockquote>
-</li>
-<li><p><code>props</code> (<em>Object?</em>): An object containing properties to resolve dynamic rule values. <em>Defaults to an empty object.</em></p>
-</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rule</td>
+<td><em>Function</em></td>
+<td></td>
+<td>A function which satisfies the <a href="../../basics/Rules.html">rule</a> behavior.<br>It <strong>must</strong> return a valid <a href="../../basics/Rules.html#styleobject">style object</a>.<br>It <strong>must</strong> only use React Native supported properties.</td>
+</tr>
+<tr>
+<td>props</td>
+<td><em>Object?</em></td>
+<td><code>{}</code></td>
+<td>An object containing properties to resolve dynamic rule values.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="returns">Returns</h3>
 <p>(<em>string</em>): The style object provided by <code>StyleSheet.create</code>.</p>
 <h3 id="example">Example</h3>
@@ -925,12 +1087,25 @@ Some values might only be applied, if a certain condition is fulfilled. Instead 
 <span class="token function">rule</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// =&gt; { color: &apos;green&apos; }</span>
 </code></pre>
 <hr>
-<h2 id="subscribelistener"><code>subscribe(listener)</code></h2>
+<h2 id="subscribe">subscribe</h2>
 <p>Adds a change <code>listener</code> to get notified when changes happen.</p>
 <h3 id="arguments">Arguments</h3>
-<ol>
-<li><code>listener</code> (<em>Function</em>): A callback function that is called on every change. It passes a change object containing information on what actually got rendered or changed. Every change object at least has a unique <code>type</code> and optionally some meta data. In addition it passes the <code>renderer</code> that triggered the change.</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>listener</td>
+<td><em>Function</em></td>
+<td>A callback function that is called on every change. It passes a change object containing information on what actually got rendered or changed. Every change object at least has a unique <code>type</code> and optionally some meta data. In addition it passes the <code>renderer</code> that triggered the change.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="returns">Returns</h3>
 <p>(<em>Object</em>): An object containing the corresponding <code>unsubscribe</code>-method.</p>
 <h3 id="example">Example</h3>
@@ -951,7 +1126,7 @@ renderer<span class="token punctuation">.</span><span class="token function">ren
 subscription<span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <hr>
-<h2 id="clear"><code>clear()</code></h2>
+<h2 id="clear">clear</h2>
 <p>Clears the whole cache.</p>
 
                                 
@@ -980,14 +1155,10 @@ subscription<span class="token punctuation">.</span><span class="token function"
 
             
                 
-                <a href="createRenderer.html" class="navigation navigation-prev " aria-label="Previous page: 6.3.1. createRenderer">
+                <a href="createRenderer.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 6.3.1. createRenderer">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../../Troubleshooting.md" class="navigation navigation-next " aria-label="Next page: 7. Troubleshooting">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -996,7 +1167,7 @@ subscription<span class="token punctuation">.</span><span class="token function"
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.3.2. Renderer","level":"1.7.3.2","depth":3,"next":{"title":"7. Troubleshooting","level":"1.8","depth":1,"path":"docs/Troubleshooting.md","ref":"docs/Troubleshooting.md","articles":[]},"previous":{"title":"6.3.1. createRenderer","level":"1.7.3.1","depth":3,"path":"docs/api/fela-native/createRenderer.md","ref":"docs/api/fela-native/createRenderer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/fela-native/Renderer.md","mtime":"2017-09-19T09:16:24.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-09-25T15:32:44.372Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.3.2. Renderer","level":"1.7.3.2","depth":3,"next":{"title":"6.4. react/preact/inferno","level":"1.7.4","depth":2,"ref":"","articles":[{"title":"6.4.1 connect","level":"1.7.4.1","depth":3,"path":"docs/api/bindings/connect.md","ref":"docs/api/bindings/connect.md","articles":[]},{"title":"6.4.2 createComponent","level":"1.7.4.2","depth":3,"path":"docs/api/bindings/createComponent.md","ref":"docs/api/bindings/createComponent.md","articles":[]},{"title":"6.4.3 createComponentWithProxy","level":"1.7.4.3","depth":3,"path":"docs/api/bindings/createComponentWithProxy.md","ref":"docs/api/bindings/createComponentWithProxy.md","articles":[]},{"title":"6.4.4 FelaComponent","level":"1.7.4.4","depth":3,"path":"docs/api/bindings/FelaComponent.md","ref":"docs/api/bindings/FelaComponent.md","articles":[]},{"title":"6.4.5 FelaTheme","level":"1.7.4.5","depth":3,"path":"docs/api/bindings/FelaTheme.md","ref":"docs/api/bindings/FelaTheme.md","articles":[]},{"title":"6.4.6 Provider","level":"1.7.4.6","depth":3,"path":"docs/api/bindings/Provider.md","ref":"docs/api/bindings/Provider.md","articles":[]},{"title":"6.4.7 ThemeProvider","level":"1.7.4.7","depth":3,"path":"docs/api/bindings/ThemeProvider.md","ref":"docs/api/bindings/ThemeProvider.md","articles":[]},{"title":"6.4.8 withTheme","level":"1.7.4.8","depth":3,"path":"docs/api/bindings/withTheme.md","ref":"docs/api/bindings/withTheme.md","articles":[]}]},"previous":{"title":"6.3.1. createRenderer","level":"1.7.3.1","depth":3,"path":"docs/api/fela-native/createRenderer.md","ref":"docs/api/fela-native/createRenderer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/fela-native/Renderer.md","mtime":"2018-03-07T19:55:19.463Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-04-04T20:05:47.768Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

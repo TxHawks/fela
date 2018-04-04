@@ -159,12 +159,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="../introduction/Drawbacks.html">
+        <li class="chapter " data-level="1.2.4" data-path="../introduction/Caveats.html">
             
-                <a href="../introduction/Drawbacks.html">
+                <a href="../introduction/Caveats.html">
             
                     
-                    1.4. Drawbacks
+                    1.4. Caveats
             
                 </a>
             
@@ -463,6 +463,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.6" data-path="UsageWithCycle.html">
+            
+                <a href="UsageWithCycle.html">
+            
+                    
+                    4.6. Usage with Cycle
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -664,12 +677,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.2" data-path="../api/fela-dom/renderToMarkup.html">
+        <li class="chapter " data-level="1.7.2.2" data-path="../api/fela-dom/rehydrate.html">
             
-                <a href="../api/fela-dom/renderToMarkup.html">
+                <a href="../api/fela-dom/rehydrate.html">
             
                     
-                    6.2.2. renderToMarkup
+                    6.2.2. rehydrate
             
                 </a>
             
@@ -677,12 +690,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.3" data-path="../api/fela-dom/renderToSheetList.html">
+        <li class="chapter " data-level="1.7.2.3" data-path="../api/fela-dom/renderToMarkup.html">
+            
+                <a href="../api/fela-dom/renderToMarkup.html">
+            
+                    
+                    6.2.3. renderToMarkup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../api/fela-dom/renderToSheetList.html">
             
                 <a href="../api/fela-dom/renderToSheetList.html">
             
                     
-                    6.2.3. renderToSheetList
+                    6.2.4. renderToSheetList
             
                 </a>
             
@@ -740,17 +766,140 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.4" >
+            
+                <span>
+            
+                    
+                    6.4. react/preact/inferno
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../api/bindings/connect.html">
+            
+                <a href="../api/bindings/connect.html">
+            
+                    
+                    6.4.1 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../api/bindings/createComponent.html">
+            
+                <a href="../api/bindings/createComponent.html">
+            
+                    
+                    6.4.2 createComponent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../api/bindings/createComponentWithProxy.html">
+            
+                <a href="../api/bindings/createComponentWithProxy.html">
+            
+                    
+                    6.4.3 createComponentWithProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.4" data-path="../api/bindings/FelaComponent.html">
+            
+                <a href="../api/bindings/FelaComponent.html">
+            
+                    
+                    6.4.4 FelaComponent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.5" data-path="../api/bindings/FelaTheme.html">
+            
+                <a href="../api/bindings/FelaTheme.html">
+            
+                    
+                    6.4.5 FelaTheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.6" data-path="../api/bindings/Provider.html">
+            
+                <a href="../api/bindings/Provider.html">
+            
+                    
+                    6.4.6 Provider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.7" data-path="../api/bindings/ThemeProvider.html">
+            
+                <a href="../api/bindings/ThemeProvider.html">
+            
+                    
+                    6.4.7 ThemeProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.8" data-path="../api/bindings/withTheme.html">
+            
+                <a href="../api/bindings/withTheme.html">
+            
+                    
+                    6.4.8 withTheme
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../Troubleshooting.md">
+
+            </ul>
             
-                <span>
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../MIGRATION.html">
+            
+                <a href="../../MIGRATION.html">
             
                     
-                    7. Troubleshooting
+                    7. Migration Guide
             
                 </a>
             
@@ -845,7 +994,11 @@
                                 <h1 id="usage-with-inferno">Usage with Inferno</h1>
 <p>Inferno is a modern React-like UI library which ships an almost identical API, but claims to be much faster.
 Due to the fact it is really similar to React&apos;s API, the <a href="https://github.com/rofrischmann/fela/tree/master/packages/inferno-fela" _target="blank">Inferno bindings for Fela</a> are basically the same as the <a href="https://github.com/rofrischmann/fela/tree/master/packages/react-fela" _target="blank">React bindings for Fela</a>.</p>
-<pre class="language-"><code class="lang-sh"><span class="token function">npm</span> i --save inferno-fela
+<pre class="language-"><code class="lang-sh"><span class="token comment" spellcheck="true"># yarn</span>
+yarn add inferno-fela
+
+<span class="token comment" spellcheck="true"># npm</span>
+<span class="token function">npm</span> i --save inferno-fela
 </code></pre>
 <p>Instead of providing duplicate documentation, we therefore want you to check out the <a href="UsageWithReact.html">Usage with React</a> instead. Just &quot;replace&quot; React with Inferno and you should be fine. There are only some differences which we are listing below.</p>
 <h3 id="different-packages">Different packages</h3>
@@ -917,7 +1070,7 @@ Due to the fact it is really similar to React&apos;s API, the <a href="https://g
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.4. Usage with Inferno","level":"1.5.4","depth":2,"next":{"title":"4.5. Usage with Angular 2","level":"1.5.5","depth":2,"path":"docs/guides/UsageWithAngular2.md","ref":"docs/guides/UsageWithAngular2.md","articles":[]},"previous":{"title":"4.3. Usage with Preact","level":"1.5.3","depth":2,"path":"docs/guides/UsageWithPreact.md","ref":"docs/guides/UsageWithPreact.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/guides/UsageWithInferno.md","mtime":"2017-09-19T09:16:24.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-09-25T15:32:44.372Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.4. Usage with Inferno","level":"1.5.4","depth":2,"next":{"title":"4.5. Usage with Angular 2","level":"1.5.5","depth":2,"path":"docs/guides/UsageWithAngular2.md","ref":"docs/guides/UsageWithAngular2.md","articles":[]},"previous":{"title":"4.3. Usage with Preact","level":"1.5.3","depth":2,"path":"docs/guides/UsageWithPreact.md","ref":"docs/guides/UsageWithPreact.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/guides/UsageWithInferno.md","mtime":"2018-03-07T19:55:19.468Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-04-04T20:05:47.768Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

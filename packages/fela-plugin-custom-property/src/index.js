@@ -1,19 +1,29 @@
 /* @flow */
-import assignStyle from 'css-in-js-utils/lib/assignStyle'
+import isPlainObject from 'isobject'
 
-import { isObject } from 'fela-utils'
+import type { StyleType } from '../../../flowtypes/StyleType'
+import type { DOMRenderer } from '../../../flowtypes/DOMRenderer'
+import type { NativeRenderer } from '../../../flowtypes/NativeRenderer'
 
-function resolveCustomProperty(style: Object, properties: Object): Object {
+function resolveCustomProperty(
+  style: Object,
+  properties: Object,
+  renderer: DOMRenderer | NativeRenderer
+): Object {
   for (const property in style) {
     const value = style[property]
 
     if (properties.hasOwnProperty(property)) {
-      assignStyle(style, properties[property](value))
-      delete style[property]
+      const resolved = properties[property](value)
+      renderer._mergeStyle(style, resolved)
+
+      if (!resolved.hasOwnProperty(property)) {
+        delete style[property]
+      }
     }
 
-    if (isObject(value)) {
-      style[property] = resolveCustomProperty(value, properties)
+    if (style.hasOwnProperty(property) && isPlainObject(value)) {
+      style[property] = resolveCustomProperty(value, properties, renderer)
     }
   }
 
@@ -21,5 +31,9 @@ function resolveCustomProperty(style: Object, properties: Object): Object {
 }
 
 export default function customProperty(properties: Object) {
-  return (style: Object) => resolveCustomProperty(style, properties)
+  return (
+    style: Object,
+    type: StyleType,
+    renderer: DOMRenderer | NativeRenderer
+  ) => resolveCustomProperty(style, properties, renderer)
 }

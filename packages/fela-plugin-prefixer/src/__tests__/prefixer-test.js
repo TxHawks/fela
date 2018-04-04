@@ -4,42 +4,20 @@ describe('Prefixer plugin', () => {
   it('should prefix styles', () => {
     const style = {
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
     }
 
-    expect(prefixer()(style)).toEqual({
-      justifyContent:
-        'center;-webkit-box-pack:center;-webkit-justify-content:center',
-      display: [
-        '-webkit-box',
-        '-moz-box',
-        '-ms-flexbox',
-        '-webkit-flex',
-        'flex'
-      ]
-    })
+    expect(prefixer()(style)).toMatchSnapshot()
   })
 
   it('should prefix nested objects', () => {
     const style = {
       display: 'flex',
       ':hover': {
-        justifyContent: 'center'
-      }
+        justifyContent: 'center',
+      },
     }
 
-    expect(prefixer()(style)).toEqual({
-      ':hover': {
-        justifyContent:
-          'center;-webkit-box-pack:center;-webkit-justify-content:center'
-      },
-      display: [
-        '-webkit-box',
-        '-moz-box',
-        '-ms-flexbox',
-        '-webkit-flex',
-        'flex'
-      ]
-    })
+    expect(prefixer()(style)).toMatchSnapshot()
   })
 })

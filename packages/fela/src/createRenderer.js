@@ -1,38 +1,42 @@
 /* @flow */
 import cssifyDeclaration from 'css-in-js-utils/lib/cssifyDeclaration'
+import assignStyle from 'css-in-js-utils/lib/assignStyle'
+import arrayEach from 'fast-loops/lib/arrayEach'
+import isPlainObject from 'isobject'
 
 import {
-  cssifyFontFace,
-  cssifyKeyframe,
-  cssifyStaticStyle,
-  generateAnimationName,
-  generateClassName,
   generateCombinedMediaQuery,
   generateCSSRule,
   generateCSSSelector,
-  generateStaticReference,
   isMediaQuery,
   isNestedSelector,
   isUndefinedValue,
-  isObject,
-  isSafeClassName,
   isSupport,
   normalizeNestedProperty,
   processStyleWithPlugins,
-  toCSSString,
-  checkFontFormat,
-  checkFontUrl,
-  arrayEach,
   STATIC_TYPE,
   RULE_TYPE,
   KEYFRAME_TYPE,
   FONT_TYPE,
-  CLEAR_TYPE
+  CLEAR_TYPE,
 } from 'fela-utils'
+
+import cssifyFontFace from './cssifyFontFace'
+import cssifyKeyframe from './cssifyKeyframe'
+import cssifyStaticStyle from './cssifyStaticStyle'
+import generateAnimationName from './generateAnimationName'
+import generateClassName from './generateClassName'
+import generateFontSource from './generateFontSource'
+import generateStaticReference from './generateStaticReference'
+import getFontFormat from './getFontFormat'
+import getFontLocals from './getFontLocals'
+import getFontUrl from './getFontUrl'
+import isSafeClassName from './isSafeClassName'
+import toCSSString from './toCSSString'
 
 import type {
   DOMRenderer,
-  DOMRendererConfig
+  DOMRendererConfig,
 } from '../../../flowtypes/DOMRenderer'
 import type { FontProperties } from '../../../flowtypes/FontProperties'
 
@@ -44,8 +48,8 @@ export default function createRenderer(
     keyframePrefixes: config.keyframePrefixes || ['-webkit-', '-moz-'],
     plugins: config.plugins || [],
     mediaQueryOrder: config.mediaQueryOrder || [],
+    supportQueryOrder: config.supportQueryOrder || [],
     selectorPrefix: config.selectorPrefix || '',
-    isConnectedToDOM: false,
 
     filterClassName: config.filterClassName || isSafeClassName,
 
@@ -62,13 +66,7 @@ export default function createRenderer(
     },
 
     renderRule(rule: Function, props: Object = {}): string {
-      const processedStyle = processStyleWithPlugins(
-        renderer,
-        rule(props, renderer),
-        RULE_TYPE,
-        props
-      )
-      return renderer._renderStyleToClassNames(processedStyle).slice(1)
+      return renderer._renderStyle(rule(props, renderer), props)
     },
 
     renderKeyframe(keyframe: Function, props: Object = {}): string {
@@ -97,7 +95,7 @@ export default function createRenderer(
         const change = {
           type: KEYFRAME_TYPE,
           keyframe: cssKeyframe,
-          name: animationName
+          name: animationName,
         }
 
         renderer.cache[keyframeReference] = change
@@ -112,33 +110,18 @@ export default function createRenderer(
       files: Array<string>,
       properties: FontProperties = {}
     ): string {
+      const { localAlias, ...otherProperties } = properties
+
       const fontReference = family + JSON.stringify(properties)
-      const fontLocals =
-        typeof properties.localAlias === 'string'
-          ? [properties.localAlias]
-          : properties.localAlias && properties.localAlias.constructor === Array
-            ? properties.localAlias.slice()
-            : []
+      const fontLocals = getFontLocals(localAlias)
 
       if (!renderer.cache.hasOwnProperty(fontReference)) {
         const fontFamily = toCSSString(family)
 
-        // remove the localAlias since we extraced the needed info
-        properties.localAlias && delete properties.localAlias
-
-        // TODO: proper font family generation with error proofing
         const fontFace = {
-          ...properties,
-          src: `${fontLocals.reduce(
-            (agg, local) => (agg += ` local(${checkFontUrl(local)}), `),
-            ''
-          )}${files
-            .map(
-              src =>
-                `url(${checkFontUrl(src)}) format('${checkFontFormat(src)}')`
-            )
-            .join(',')}`,
-          fontFamily
+          ...otherProperties,
+          src: generateFontSource(files, fontLocals),
+          fontFamily,
         }
 
         const cssFontFace = cssifyFontFace(fontFace)
@@ -146,7 +129,7 @@ export default function createRenderer(
         const change = {
           type: FONT_TYPE,
           fontFace: cssFontFace,
-          fontFamily
+          fontFamily,
         }
 
         renderer.cache[fontReference] = change
@@ -165,7 +148,7 @@ export default function createRenderer(
         const change = {
           type: STATIC_TYPE,
           css: cssDeclarations,
-          selector
+          selector,
         }
 
         renderer.cache[staticReference] = change
@@ -178,7 +161,7 @@ export default function createRenderer(
 
       return {
         unsubscribe: () =>
-          renderer.listeners.splice(renderer.listeners.indexOf(callback), 1)
+          renderer.listeners.splice(renderer.listeners.indexOf(callback), 1),
       }
     },
 
@@ -188,10 +171,22 @@ export default function createRenderer(
       renderer.cache = {}
 
       renderer._emitChange({
-        type: CLEAR_TYPE
+        type: CLEAR_TYPE,
       })
     },
 
+    _mergeStyle: assignStyle,
+
+    _renderStyle(style: Object = {}, props: Object = {}): string {
+      const processedStyle = processStyleWithPlugins(
+        renderer,
+        style,
+        RULE_TYPE,
+        props
+      )
+
+      return renderer._renderStyleToClassNames(processedStyle).slice(1)
+    },
     _renderStyleToClassNames(
       { _className, ...style }: Object,
       pseudo: string = '',
@@ -203,8 +198,7 @@ export default function createRenderer(
       for (const property in style) {
         const value = style[property]
 
-        // TODO: this whole part could be trimmed
-        if (isObject(value)) {
+        if (isPlainObject(value)) {
           if (isNestedSelector(property)) {
             classNames += renderer._renderStyleToClassNames(
               value,
@@ -235,7 +229,9 @@ export default function createRenderer(
               combinedSupport
             )
           } else {
-            // TODO: warning
+            console.warn(`The object key "${property}" is not a valid nested key in Fela. 
+Maybe you forgot to add a plugin to resolve it? 
+Check http://fela.js.org/docs/basics/Rules.html#styleobject for more information.`)
           }
         } else {
           const declarationReference =
@@ -246,7 +242,7 @@ export default function createRenderer(
             // usage of optional props without side-effects
             if (isUndefinedValue(value)) {
               renderer.cache[declarationReference] = {
-                className: ''
+                className: '',
               }
               /* eslint-disable no-continue */
               continue
@@ -269,7 +265,7 @@ export default function createRenderer(
               selector,
               declaration,
               media,
-              support
+              support,
             }
 
             renderer.cache[declarationReference] = change
@@ -290,12 +286,11 @@ export default function createRenderer(
 
     _emitChange(change: Object): void {
       arrayEach(renderer.listeners, listener => listener(change))
-    }
+    },
   }
 
   // initial setup
   renderer.keyframePrefixes.push('')
-  renderer.clear()
 
   if (config.enhancers) {
     arrayEach(config.enhancers, enhancer => {

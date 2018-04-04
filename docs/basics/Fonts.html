@@ -159,12 +159,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="../introduction/Drawbacks.html">
+        <li class="chapter " data-level="1.2.4" data-path="../introduction/Caveats.html">
             
-                <a href="../introduction/Drawbacks.html">
+                <a href="../introduction/Caveats.html">
             
                     
-                    1.4. Drawbacks
+                    1.4. Caveats
             
                 </a>
             
@@ -463,6 +463,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.6" data-path="../guides/UsageWithCycle.html">
+            
+                <a href="../guides/UsageWithCycle.html">
+            
+                    
+                    4.6. Usage with Cycle
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -664,12 +677,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.2" data-path="../api/fela-dom/renderToMarkup.html">
+        <li class="chapter " data-level="1.7.2.2" data-path="../api/fela-dom/rehydrate.html">
             
-                <a href="../api/fela-dom/renderToMarkup.html">
+                <a href="../api/fela-dom/rehydrate.html">
             
                     
-                    6.2.2. renderToMarkup
+                    6.2.2. rehydrate
             
                 </a>
             
@@ -677,12 +690,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.3" data-path="../api/fela-dom/renderToSheetList.html">
+        <li class="chapter " data-level="1.7.2.3" data-path="../api/fela-dom/renderToMarkup.html">
+            
+                <a href="../api/fela-dom/renderToMarkup.html">
+            
+                    
+                    6.2.3. renderToMarkup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../api/fela-dom/renderToSheetList.html">
             
                 <a href="../api/fela-dom/renderToSheetList.html">
             
                     
-                    6.2.3. renderToSheetList
+                    6.2.4. renderToSheetList
             
                 </a>
             
@@ -740,17 +766,140 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.4" >
+            
+                <span>
+            
+                    
+                    6.4. react/preact/inferno
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../api/bindings/connect.html">
+            
+                <a href="../api/bindings/connect.html">
+            
+                    
+                    6.4.1 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../api/bindings/createComponent.html">
+            
+                <a href="../api/bindings/createComponent.html">
+            
+                    
+                    6.4.2 createComponent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../api/bindings/createComponentWithProxy.html">
+            
+                <a href="../api/bindings/createComponentWithProxy.html">
+            
+                    
+                    6.4.3 createComponentWithProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.4" data-path="../api/bindings/FelaComponent.html">
+            
+                <a href="../api/bindings/FelaComponent.html">
+            
+                    
+                    6.4.4 FelaComponent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.5" data-path="../api/bindings/FelaTheme.html">
+            
+                <a href="../api/bindings/FelaTheme.html">
+            
+                    
+                    6.4.5 FelaTheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.6" data-path="../api/bindings/Provider.html">
+            
+                <a href="../api/bindings/Provider.html">
+            
+                    
+                    6.4.6 Provider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.7" data-path="../api/bindings/ThemeProvider.html">
+            
+                <a href="../api/bindings/ThemeProvider.html">
+            
+                    
+                    6.4.7 ThemeProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.8" data-path="../api/bindings/withTheme.html">
+            
+                <a href="../api/bindings/withTheme.html">
+            
+                    
+                    6.4.8 withTheme
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../Troubleshooting.md">
+
+            </ul>
             
-                <span>
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../MIGRATION.html">
+            
+                <a href="../../MIGRATION.html">
             
                     
-                    7. Troubleshooting
+                    7. Migration Guide
             
                 </a>
             
@@ -847,7 +996,7 @@
 There are only seven different properties a <code>@font-face</code> rule accepts.</p>
 <h2 id="font-family--source-files">Font Family &amp; Source Files</h2>
 <p>The font family specifies a name which is later used to reference the font within other rules. The source files are basically relative or absolute paths pointing to a valid font file. Both are required to get a valid font face rendered.
-Base64 font file is also supported. Just make sure you supply the mime type for the font.</p>
+Base64 font files are also supported. Just make sure you supply the correct mime type for those.</p>
 <h2 id="font-properties">Font Properties</h2>
 <p>In addition to the required parameters, each font face accepts five other properties to customize the font. They all are standard CSS properties:</p>
 <ul>
@@ -856,15 +1005,14 @@ Base64 font file is also supported. Just make sure you supply the mime type for 
 <li><code>fontWeight</code></li>
 <li><code>fontStyle</code></li>
 <li><code>unicodeRange</code></li>
-<li><code>localAlias</code> - <code>String or Array<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>String</span><span class="token punctuation">&gt;</span></span></code> - Provides way to reference locally installed system fonts by name, if available.</li>
 </ul>
 <p><br></p>
 <hr>
 <h3 id="related">Related</h3>
 <ul>
-<li><a href="Renderer.html#renderfont">Rendering fonts</a></li>
-<li><a href="../api/fela/Renderer.html#renderfontfontfamily-files-properties">API reference - <code>Renderer.renderFont</code> </a></li>
-<li><a href="../FAQ.html#fonts">FAQ - Fonts</a></li>
+<li><a href="Renderer.html#renderfont">Rendering Fonts</a></li>
+<li><a href="../api/fela/Renderer.html#renderfontfontfamily-files-properties">API Reference - <code>Renderer.renderFont</code> </a></li>
+<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-embedded" _target="blank">Plugin - fela-plugin-embedded</a></li>
 </ul>
 
                                 
@@ -909,7 +1057,7 @@ Base64 font file is also supported. Just make sure you supply the mime type for 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.3. Fonts","level":"1.3.3","depth":2,"next":{"title":"2.4. Renderer","level":"1.3.4","depth":2,"path":"docs/basics/Renderer.md","ref":"docs/basics/Renderer.md","articles":[]},"previous":{"title":"2.2. Keyframes","level":"1.3.2","depth":2,"path":"docs/basics/Keyframes.md","ref":"docs/basics/Keyframes.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/basics/Fonts.md","mtime":"2017-09-19T09:16:24.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-09-25T15:32:44.372Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.3. Fonts","level":"1.3.3","depth":2,"next":{"title":"2.4. Renderer","level":"1.3.4","depth":2,"path":"docs/basics/Renderer.md","ref":"docs/basics/Renderer.md","articles":[]},"previous":{"title":"2.2. Keyframes","level":"1.3.2","depth":2,"path":"docs/basics/Keyframes.md","ref":"docs/basics/Keyframes.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/basics/Fonts.md","mtime":"2018-03-07T19:55:19.466Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-04-04T20:05:47.768Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
